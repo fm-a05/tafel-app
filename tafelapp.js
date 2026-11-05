@@ -1,3 +1,4 @@
+let juisteantwoord = 0;
 let tafelinputObj = document.getElementById("inputTafel");
 let tafeloutputObj = document.getElementById("outputTafel");
 
@@ -26,5 +27,30 @@ function showTafel() {
 
 function showOpgave() {
     let randomgetal = Math.floor(Math.random() * 10) + 1;
-    outputopgaveObj.innerHTML = randomgetal + " x " + tafelinput1Obj.value + " = ";
+    juisteantwoord = randomgetal * tafelinput1Obj.value;
+    outputopgaveObj.innerHTML = randomgetal + " x " + tafelinput1Obj.value + " = ?";
 }
+
+function controleerknop() {
+    let antwoord = Number(inputTafel11Obj.value);
+    if (antwoord === juisteantwoord) {
+        outputfeedbackObj.innerHTML = "✅ Correct!";
+        inputTafel11Obj.value = "";
+        showOpgave();
+    } else {
+        outputfeedbackObj.innerHTML =
+            "❌ Fout Het juiste antwoord is " + juisteantwoord + ". Probeer het nog eens!";
+    }
+}
+
+// function controleerknop() {
+//     let antwoord = Number(inputTafel11Obj.value);
+
+//     alert(
+//         "Antwoord: " +
+//         antwoord +
+//         " | Juiste uitkomst: " +
+//         juisteantwoord +
+//         ")"
+//     );
+//}
