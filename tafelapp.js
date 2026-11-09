@@ -42,15 +42,3 @@ function controleerknop() {
             "❌ Fout Het juiste antwoord is " + juisteantwoord + ". Probeer het nog eens!";
     }
 }
-
-// function controleerknop() {
-//     let antwoord = Number(inputTafel11Obj.value);
-
-//     alert(
-//         "Antwoord: " +
-//         antwoord +
-//         " | Juiste uitkomst: " +
-//         juisteantwoord +
-//         ")"
-//     );
-//}
